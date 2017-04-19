@@ -1,0 +1,205 @@
+<html>
+<head>
+<title>Multiple Results</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="bootstrap.min.css"></link>
+<script href="bootstrap.min.js"></script>
+<body>
+<nav class="navbar navbar-inverse">
+	<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<h1 id="head1" class="navbar-brand navbar-text" style="color:white; font-size:44px;">Toce-Results</h1>
+	</div>
+	 <div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav navbar-right navbar-text" style="color:white; font-size:34px;" >
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="adminpage.html">Admin</a></li>
+    </ul>	
+	</div>
+</nav>
+<br/>
+<hr/>
+<div class="container-fluid" style="">
+ <div class="row">
+<div class="col-sm-1"></div>
+	<div class="col-md-3 col-sm-6 panel" style="background-color:rgb(17, 92, 155); padding:5px 25px;">
+	 <div style="text-align:center; color:black; padding:5px 25px; ">
+	 <div class="col-title"><h1><strong>Class Result</strong></h1></div>
+	 <hr/>
+ 	 <h3>Enter the first 7 letters of the USN.</h3>
+	 <form method="post" action="testcscs.php">
+	 <h3><strong>USN:</strong></h3>
+	 <input name="usn" placeholder="First 7 digits of usn here" size="20" pattern="[1-4]{1}[a-z]{2}[1-9]{2}[a-z]{2}" autocomplete="off" required value=""></input>
+	 <br/>
+	 <h3><strong>SEM:</strong></h3> 
+	 <select size="1" required="required" name="semester" autocomplete="off" required>
+            <option selected="selected" value="0" disabled>-----</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>	
+	 </select>
+	 <br/>
+	 <h3><strong>ORDER BY:</strong></h3> 
+ <select size="1" required="required" name="order" autocomplete="off" required>
+            <option selected="selected" disabled>-----</option>
+            <option value="usn">Usn</option>
+            <option value="sgpa desc">rank</option>
+</select>
+<br/> <br/>
+	 <button class="btn" style="background-color:black; color:white; padding:5px 25px;" value="submit1" name="submit"><strong>SUBMIT</strong></button>
+</form>
+</div>
+</div>
+<div class="col-sm-1"></div>
+<div class="col-md-4 col-sm-6" style="font-color:black; text-align:justified; padding:5px 5px;">
+<h2>
+<ul>
+  <li>Enter the first 7 digits of the usn.</li><br/>
+  <li>Select semester.</li><br/>
+  <li>Choose the order in which the result has to be Displayed.</li><br/>
+  <li>Press the submit button to view the result.</li><br/>
+</ul>
+</h2>
+</div>
+</div>
+<hr/>
+ <div class="row">
+	<div class="col-sm-1"></div>
+<div class="col-md-4 col-sm-6 panel" style="font-color:black; text-align:justified; padding:5px 5px;">
+<h2>
+<ul>
+  <li>Enter the start and end USN for which result has to be displayed.</li><br/>
+  <li>Select the semester.</li><br/>
+  <li>Press the submit button to view the result.</li><br/>
+</ul>
+</h2>
+</div >
+<div class="col-sm-2"></div>
+<div class="col-md-3 col-sm-6 panel" style="background-color:darkolivegreen; padding:5px 25px;">
+	 <div style="text-align:center; color:black; padding:5px 25px; ">
+	 <div class="col-title"><h1><strong>Multiple-Result</strong></h1></div>
+	 <hr/>
+ 	 <h3>Enter start and End USN.</h3>
+	 <form method="post" action="testcscs.php">
+	 <h3><strong>START USN:</strong></h3>
+	 <input name="start" placeholder="Start Usn" size="20" pattern="[1-4]{1}[a-z]{2}[1-9]{2}[a-z]{2}[0-9]{3}" required autocomplete="off" value=""></input>
+	 <br/>
+	 <h3><strong>End USN:</strong></h3>
+	<input name="end" placeholder="End Usn" size="20" pattern="[1-4]{1}[a-z]{2}[1-9]{2}[a-z]{2}[0-9]{3}" required autocomplete="off" value=""></input>
+	 <br/>
+	 <h3><strong>SEM:</strong></h3> 
+	 <select size="1" required="required" name="semester" autocomplete="off" required>
+            <option selected="selected" value="0" disabled>-----</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+	 </select>
+	 <br/> <br/>
+	 <button class="btn" style="background-color:black; color:white; padding:5px 25px;" value="submit2" name="submit"><strong>SUBMIT</strong></button>
+</form>
+</div>
+</div>
+</div>
+<hr/>
+ <div class="row">
+<div class="col-sm-1"></div>
+
+	<div class="col-md-3 col-sm-6 panel" style="background-color:rgb(17, 92, 155); padding:5px 25px;">
+	 <div style="text-align:center; color:black; padding:5px 25px; ">
+	 <div class="col-title"><h1><strong>Download Result</strong></h1></div>
+	 <hr/>
+ 	 <h3>Enter the first 7 letters of the USN.</h3>
+	 <form method="post" action="testcscs.php">
+	 <h3><strong> USN:</strong></h3>
+	<input name="usn" placeholder="7 digit Usn" size="20" pattern="[1-4]{1}[a-z]{2}[1-9]{2}[a-z]{2}" autocomplete="off" value="" required></input>
+	 <br/>
+	 <h3><strong>SEM:</strong></h3> 
+	 <select size="1" required="required" name="semester" autocomplete="off" required>
+            <option selected="selected" value="0" disabled>-----</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+	 </select>
+	 <br/> <br/>
+	 <button class="btn" style="background-color:black; color:white; padding:5px 25px;" value="submit3" name="submit"><strong>Download</strong></button>
+</form>
+</div>
+</div>
+<div class="col-sm-1"></div>
+<div class="col-md-3 col-sm-6 panel" style="font-color:black; text-align:justified; padding:5px 5px;">
+<h2><br/>
+<ul>
+  <li>Enter the first 7 digits of USN.</li><br/>
+  <li>choose the semester.</li><br/>
+  <li>Press download button to download the class result.</li><br/>
+</ul>
+</h2>
+</div>
+</div>
+<hr/>
+ <div class="row">
+	<div class="col-sm-1"></div>
+<div class="col-md-4 col-sm-6 panel" style="font-color:black; text-align:justified; padding:5px 5px;">
+<h2>
+<ul>
+  <li>Enter the subject code,class & semester for which result has to be displayed.</li><br/>
+  <li>Pass percentage will be displayed.</li><br/>
+  <li>Press the submit button to view the result.</li><br/>
+</ul>
+</h2>
+</div >
+<div class="col-sm-2"></div>
+<div class="col-md-3 col-sm-6 panel" style="background-color:darkolivegreen; padding:5px 25px;">
+	 <div style="text-align:center; color:black; padding:5px 25px; ">
+	 <div class="col-title"><h1><strong>Subject Analyser</strong></h1></div>
+	 <hr/>
+ 	 <h3>Enter subject Code and sem. </h3>
+	 <form method="post" action="testcscs.php">
+	 <h3><strong> USN:</strong></h3>
+	<input name="usn" placeholder="7 digit Usn" size="20" pattern="[1-4]{1}[a-z]{2}[1-9]{2}[a-z]{2}" autocomplete="off" value="" required></input>
+	 <br/>	 
+	<h3><strong>Sub code:</strong></h3>
+	 <input name="subcode" placeholder="Subject Code" size="20" pattern="[0-9]{2}[a-z A-Z]{2,4}[1-9]{2}" required autocomplete="off" value=""></input>
+	 <br/>
+	  <h3><strong>SEM:</strong></h3> 
+	 <select size="1" required="required" name="semester" autocomplete="off" required>
+            <option selected="selected" value="0" disabled>-----</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+	 </select>
+	 <br/> <br/>
+	 <button class="btn" style="background-color:black; color:white; padding:5px 25px;" value="submit4" name="submit"><strong>SUBMIT</strong></button>
+</form>
+</div>
+</div>
+</div>
+<hr/>
+</body>
+</head>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Admin Login</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="bootstrap.min.css"></link>
+<script href="bootstrap.min.js"></script>
+<body>
+<nav class="navbar navbar-inverse">
+	<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="index.html"><h1 id="head1" class="navbar-brand navbar-text" style="color:white; font-size:44px;">Toce-Results</h1></a>
+	</div>		<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav navbar-right navbar-text" style="color:white; font-size:34px;" >
+      <li ><a href="index.html">Home</a></li>
+      <li class="active"><a href="#">Contact</a></li>
+      <li><a href="adminpage.html">Admin</a></li>
+    </ul>	
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="col-md-8">
+	<fieldset style="border:10px;">
+	<form method="post" action="email.php">	
+	<h2>Email</h2>
+	<input style="height:30px; width:200px;" name="mailid"></input>	
+	<h1>Feedback Here!</h1>
+	<textarea style="height:300px; width:600px;" name="message"></textarea>
+	<br/>	
+	<button class="btn" style="display:inline-block; color:white; background-color:black; width:100px; height:45px; font-size:20px;" value="submit" name="submit" type="submit" >Submit</button>	
+	</form>	
+	</fieldset>	
+	</div>
+</body>
+<head>
+<html>
