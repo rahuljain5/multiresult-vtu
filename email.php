@@ -1,20 +1,28 @@
- <?php
-         $to = "rjain.rahul5@gmail.com";
-         $subject = "response vtu-result-page";
-         
-         $message = "<b>".$_POST['message']."</b>";
-         $message .= "<h1>feedback from toce-results.webutu.com.</h1>";
-         
-         $header = "From:".$_POST['mailid']."\r\n";
-         $header .= "Cc:afgh@somedomain.com \r\n";
-         $header .= "MIME-Version: 1.0\r\n";
-         $header .= "Content-type: text/html\r\n";
-         
-         $retval = mail ($to,$subject,$message,$header);
-         
-         if( $retval == true ) {
-            echo "Message sent successfully...";
-         }else {
-            echo "Message could not be sent...";
-         }
-      ?>
+<?php
+  include('class.phpmailer.php');
+ include('class.smtp.php');
+if(isset($_POST['mail']))
+{
+$to="rjain.rahul5@gmail.com";
+$from=$_POST['email'];
+$from_name="Multiple Results"; 
+$subject="Feedback";
+$body=$_POST['content'];
+$email = new PHPMailer();
+$email->From      = $from;
+$email->FromName  = $from_name;
+$email->Subject   = $subject;
+$email->Body      = $body;
+$email->AddAddress($to);
+if(!$email->Send()) {
+		$error = 'Mail error: '.$mail->ErrorInfo; 
+		return false;
+	}
+            else {
+		$error = 'Message sent!';
+		echo "<h1 style="text-align:center;"><b>Success!</b></h1>";
+	}
+}
+
+
+?>
