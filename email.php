@@ -20,7 +20,7 @@ if(!$email->Send()) {
 	}
             else {
 		$error = 'Message sent!';
-		echo "<h1 style="text-align:center;"><b>Success!</b></h1>";
+		echo "<h1 style=text-align:center;><b>Success!</b></h1>";
 	}
 }
 
